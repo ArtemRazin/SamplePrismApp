@@ -16,7 +16,7 @@
     <ProjectReference Include="..\..\ModuleA\ModuleA.csproj" />
     <ProjectReference Include="..\..\ModuleB\ModuleB.csproj" />
   </ItemGroup>
-	<Target Name="Protect" AfterTargets="AfterCompile" BeforeTargets="BeforePublish">
+	<Target Name="Protect" AfterTargets="XamlC" BeforeTargets="BeforePublish">
 		<ItemGroup>
 			<Assemblies Include="$(ProjectDir)$(IntermediateOutputPath)$(TargetFileName)" />
 		</ItemGroup>
